@@ -1,1 +1,1 @@
-# Adavances in Data Sciences
+# Advances in Data Sciences
