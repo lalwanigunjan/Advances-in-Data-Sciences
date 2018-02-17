@@ -152,6 +152,7 @@ def get_url(year):
     linkurl = 'https://www.sec.gov' + ahref
     logging.debug('Calling the initial URL')
     linkhtml = urlopen(linkurl)
+    print(linkhtml)
     get_allmonth_data(linkhtml, year)
 
 
@@ -182,6 +183,7 @@ def main():
             year= str(arg)
         counter += 1
     logfilename = 'log_Edgar_'+ year + '_' + st + '.txt'
+    print(logfilename)
     logging.basicConfig(filename=logfilename, level=logging.DEBUG,
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.debug('Program Start')
