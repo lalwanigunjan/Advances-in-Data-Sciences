@@ -26,7 +26,7 @@ RUN pip3 install luigi
 
  
 # Bundle app source
-COPY edgarDataScrapping.py /src/edgarDataScrapping.py
+COPY scrappingDataHtml.py /src/scrappingDataHtml.py
 
 EXPOSE  8000
-CMD ["python", "/src/edgarDataScrapping.py", "-p 8000"]
+CMD ["python", "/src/scrappingDataHtml.py", "-p 8000"]

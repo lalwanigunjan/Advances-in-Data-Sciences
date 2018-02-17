@@ -26,7 +26,7 @@ RUN pip3 install luigi
 
  
 # Bundle app source
-COPY edgarLogAnalysis.py /src/edgarLogAnalysis.py
+COPY dataanalysis.py /src/dataanalysis.py
 
 EXPOSE  8000
-CMD ["python", "/src/edgarLogAnalysis.py", "-p 8000"]
+CMD ["python", "/src/dataanalysis.py", "-p 8000"]
