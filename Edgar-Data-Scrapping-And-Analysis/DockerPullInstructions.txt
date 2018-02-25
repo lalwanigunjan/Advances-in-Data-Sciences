@@ -1,0 +1,11 @@
+For PART1:
+
+docker pull lalwanigunjan/part1
+
+docker run lalwanigunjan/part1 python /src/EdgarDataScrapping.py cik=CIK accessionNumber=ACCESSIONNO accessKey=ACCESSKEY secretKey=SECRETKEY location=AWSLOCATION
+
+For PART2:
+
+docker pull lalwanigunjan/part1
+
+docker run lalwanigunjan/part1 python /src/EdgarLogfilesAnalysis.py year=LOGFILEYEAR accessKey=ACCESSKEY secretKey=SECRETKEY location=AWSLOCATION
