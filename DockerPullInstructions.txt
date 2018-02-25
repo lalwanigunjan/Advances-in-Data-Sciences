@@ -1,2 +1,0 @@
-docker pull annsara95/a1p1docker
-docker pull annsara95/a1p2docker
