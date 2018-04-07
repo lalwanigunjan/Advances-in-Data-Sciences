@@ -1,2 +1,7 @@
 #!/bin/bash
-jupyter nbextension enable --py --sys-prefix ipyleaflet
+set -e
+
+# clean the output from the notebooks
+for d in *ipynb; do
+    python clean_notebook.py $d;
+done;
