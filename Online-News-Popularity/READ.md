@@ -33,3 +33,13 @@ The process is divided into 2 parts:
  2. The docker image in Amazon S3 has the pickle file of all the model.
  3. The data is run through a machine learning pipeline with all models.
  4. The best model is the one with high accuracy which displayed to the user through a csv file and a table with results.
+ 
+### Relevant Papers:
+****
+
+K. Fernandes, P. Vinagre and P. Cortez. A Proactive Intelligent Decision Support System for Predicting the Popularity of Online News. Proceedings of the 17th EPIA 2015 - Portuguese Conference on Artificial Intelligence, September, Coimbra, Portugal.
+
+### Citation :
+**** 
+
+K. Fernandes, P. Vinagre and P. Cortez. A Proactive Intelligent Decision Support System for Predicting the Popularity of Online News. Proceedings of the 17th EPIA 2015 - Portuguese Conference on Artificial Intelligence, September, Coimbra, Portugal.
