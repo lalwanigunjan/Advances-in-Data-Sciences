@@ -5,4 +5,4 @@
 
 # Try it Live
 
-https://mybinder.org/v2/gh/lalwanigunjan/Advances-in-Data-Sciences/master
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/lalwanigunjan/Advances-in-Data-Sciences/master)
