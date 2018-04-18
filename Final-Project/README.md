@@ -1,15 +1,16 @@
 # Final-Project for INFO 7390-Advanced Data Science
 
-# Project Name - Movie Recommendation System
+## Project Name - Movie Recommendation System
 
-# Dataset Name and Link - Movielens Dataset
-                          http://grouplens.org/datasets/movielens/20m/
+### Dataset Name - Movielens Dataset
+### Link -http://grouplens.org/datasets/movielens/20m/
                           
-## Team Members:
+### Team Members:
 
 1. Gunjan Lalwani
 2. Rishabh Jain
 3. Ann Sara Sajee
 
 ## Professor-Srikanth Krishnamurthy
-This project will be completed under the guidance of Professor Srikanth Krishnamurthy and TA Tushar Goel.
+
+### This project will be completed under the guidance of Professor Srikanth Krishnamurthy and TA Tushar Goel.
