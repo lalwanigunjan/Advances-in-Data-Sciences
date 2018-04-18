@@ -7,9 +7,9 @@
                           
 ## Team Members:
 
-Gunjan Lalwani
-Rsshabh Jain
-Ann Sara Sajee
+1. Gunjan Lalwani
+2. Rishabh Jain
+3. Ann Sara Sajee
 
 ## Professor-Srikanth Krishnamurthy
 This project will be completed under the guidance of Professor Srikanth Krishnamurthy and TA Tushar Goel.
