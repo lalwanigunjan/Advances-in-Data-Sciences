@@ -11,6 +11,6 @@
 2. Rishabh Jain
 3. Ann Sara Sajee
 
-## Professor-Srikanth Krishnamurthy
+### Professor-Srikanth Krishnamurthy
 
 ### This project will be completed under the guidance of Professor Srikanth Krishnamurthy and TA Tushar Goel.
