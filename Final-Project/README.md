@@ -13,7 +13,7 @@
 
 #### Professor-Srikanth Krishnamurthy
 
-#### Progress Report
+#### Progress Report:
 
 ##### Plans for WEEK 1:
 
