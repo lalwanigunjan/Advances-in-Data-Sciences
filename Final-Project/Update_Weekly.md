@@ -2,7 +2,7 @@
 1. Data cleansing
 2. EDA
 2. Feature Engineering
-3. non-personalised recommendation
+3. Non-personalised recommendation
 4. UI & flask app
 
 ## Work for next week?
