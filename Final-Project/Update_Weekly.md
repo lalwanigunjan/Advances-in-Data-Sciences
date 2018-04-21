@@ -9,6 +9,3 @@
 1. Collaborative filtering
 2. Flask completion
 
-## Any technical difficulties?
-No
-
