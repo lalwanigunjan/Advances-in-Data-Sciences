@@ -8,7 +8,7 @@ The movie recommendation system provides personalized recommendation to each use
 Content Based Filtering is based on the user data by providing ratings on the movies. Based on this, the user profile is generated and recommendations are given.
 
 ### Collaborative Filtering:
-Collaborative filtering is based on previous behaviour of the user and not based on present context.
+Collaborative filtering is based on previous behaviour of the user and not based on present context. Users are grouped together and recommendations are shown based on similar likability.
 
 a) User-User Collaborative filtering:
 It is based on segmenting users on the similarity matrix. Users with similar tastes are grouped together. 
