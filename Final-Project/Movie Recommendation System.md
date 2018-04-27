@@ -63,8 +63,7 @@ Using Snowball Stemmer, we understand the root of the words used.
 This proves that adding weight to the director definitely works, as most of the movies in Top 10 is of Christopher Nolan.
 
 #### 3. Popularity Based Recommender
-Since our current recommender doesn't take popularity and ratings into account, it will show a not so popular movie over a popular one. Returning a popular movie with high ratings will make more sense. Hence, taking popularity into consideration is extremely important.
-
+Since our current recommender doesn't take popularity and ratings into account, it will show a not so popular movie over a popular one. Returning a popular movie with high ratings will make more sense. Hence, taking popularity into consideration is extremely important. 
 
 ### Collaborative based Filtering
 It provides more better results than Content based as it provides overall user view on a movie than focusing on a particular users tastes.We have built a CF model using Scikit learn’s Surprise library which provides a simple data ingestion for making recommendations through CF. It also provides powerful algorithms like Singular Value Decomposition(SVD) to minimize RMSE and provide great recommendations.
@@ -86,7 +85,7 @@ GraphLab is used for:
 
 This includes Model Based Collaborative Filtering which fetched the best results. Movielens has provided a rich dataset that allows us to study past behaviors to provide recommendations to users.We tested our dataset on 3 models: 
 1. Item Based Recommendation Models 
-2. Content Based Recommendation Models 
+2. Content Based Recommendation Model 
 3. Popularity Based Recommendation Models 
 
 ### A Collaborative Filtering Model
@@ -110,27 +109,23 @@ Similarity is the cosine of the angle between the 2 vectors of the item vectors 
 #### Pearson Similarity
 Similarity is the pearson coefficient between the two vectors.
 
-In our case, **we have used cosine similarity.**
+In our case, we have used cosine similarity.
 
-### 1. Item Based Recommendation Models:
+We have trained data on 2 models :
+1. Item similarity model
+2. Popularity model
 
-![Item Based recommender](https://github.com/lalwanigunjan/Advances-in-Data-Sciences/blob/master/Final-Project/Screenshots/Screen%20Shot%202018-04-27%20at%203.44.51%20AM.jpg)
+We got good precision and recall values with Item Similarity model.
 
-#### Results:
-![](https://github.com/lalwanigunjan/Advances-in-Data-Sciences/blob/master/Final-Project/Screenshots/Screen%20Shot%202018-04-27%20at%203.45.04%20AM.jpg)
+#### Content based Recommendations
 
-### 2. Content Based Recommendation Models:
-![](https://github.com/lalwanigunjan/Advances-in-Data-Sciences/blob/master/Final-Project/Screenshots/Screen%20Shot%202018-04-27%20at%203.47.39%20AM.jpg)
+Cntent based model is in which the similarity between the items recommended is determined by the content of those items rather than learned from user interaction data.
 
-#### Results:
-![](https://github.com/lalwanigunjan/Advances-in-Data-Sciences/blob/master/Final-Project/Screenshots/Screen%20Shot%202018-04-27%20at%203.47.47%20AM.jpg)
+The similarity score between two items is calculated by first computing the similarity between the item data for each column, then taking a weighted average of the per-column similarities to get the final similarity. The recommendations are generated according to the average similarity of a candidate item to all the items in a user’s set of rated items.
 
-### 3. Popularity based recommender:
-Popularity based recommender understands the popularity of a movie and recommends movies based on high popularity and high ratings.\
-![](https://github.com/lalwanigunjan/Advances-in-Data-Sciences/blob/master/Final-Project/Screenshots/Screen%20Shot%202018-04-27%20at%203.44.08%20AM.jpg)
+The recommendations from content based recommender are quite accurate.
 
-#### Results:
-![](https://github.com/lalwanigunjan/Advances-in-Data-Sciences/blob/master/Final-Project/Screenshots/Screen%20Shot%202018-04-27%20at%203.44.18%20AM.jpg)
+<img src = "/Screenshots/content.jpg">
 
 
 Reference: https://www.analyticsvidhya.com/blog/2015/12/started-graphlab-python/
