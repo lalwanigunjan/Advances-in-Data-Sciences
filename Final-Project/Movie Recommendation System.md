@@ -1,6 +1,6 @@
 # Movie Recommendation System
 
-[alt text](https://i.imgur.com/CaTD18H.jpg)
+<img src = "https://i.imgur.com/CaTD18H.jpg">
 The movie recommendation system provides personalized recommendation to each user based on 2 aspects:\
 **1. **Content Based Filtering****\
 **2. Collaborative Based Filtering**\
