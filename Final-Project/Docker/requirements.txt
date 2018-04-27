@@ -1,0 +1,11 @@
+requests
+numpy==1.11.2
+pandas
+boto3
+matplotlib
+seaborn
+scipy
+nltk
+dill
+Cython
+scikit-learn
