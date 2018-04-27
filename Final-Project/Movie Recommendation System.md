@@ -83,5 +83,33 @@ GraphLab is used for:
 3. Machine Learning modelling
 4. Production automation
 
+This includes Model Based Collaborative Filtering which fetched the best results. Movielens has provided a rich dataset that allows us to study past behaviors to provide recommendations to users.We tested our dataset on 3 models: 
+1. Item Based Recommendation Models 
+2. Content Based Recommendation Model 
+3. Popularity Based Recommendation Models 
+
+### A Collaborative Filtering Model
+
+The core idea works in 2 steps:
+
+Find similar items by using a similarity metric
+For a user, recommend the items most similar to the items (s)he already likes
+This is done by making an item-item matrix in which we keep a record of the pair of items which were rated together.
+
+In this case, an item is a movie. Once we have the matrix, we use it to determine the best recommendations for a user based on the movies he has already rated.
+
+There are 3 types of item similarity metrics supported by graphlab. These are:
+
+#### Jaccard Similarity: 
+Similarity is based on the number of users which have rated item A and B divided by the number of users who have rated either A or B
+
+#### Cosine Similarity:
+Similarity is the cosine of the angle between the 2 vectors of the item vectors of A and B, Closer the vectors, smaller will be the angle and larger the cosine
+
+#### Pearson Similarity
+Similarity is the pearson coefficient between the two vectors.
+
+In our case, we have used cosine similarity.
+
 
 Reference: https://www.analyticsvidhya.com/blog/2015/12/started-graphlab-python/
