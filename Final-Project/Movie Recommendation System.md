@@ -1,8 +1,8 @@
 # Movie Recommendation System
 
-The movie recommendation system provides personalized recommendation to each user based on 2 aspects:
-**1. **Content Based Filtering****
-**2. Collaborative Based Filtering**
+The movie recommendation system provides personalized recommendation to each user based on 2 aspects:\
+**1. **Content Based Filtering****\
+**2. Collaborative Based Filtering**\
 **3. Hybrid method**
 
 ### Content Based Filtering:
@@ -20,8 +20,8 @@ b) Item-Item Collaborative filtering: It is based on segmenting movies(here) on 
 Hybrid Recommender leverages the best of both Content based and collaborative filtering techniques.
 
 ### Implementation:
-We have implemented the Movie Recommendation System in 2 ways:
-**1. Using NTLK and Surprise Library**
+We have implemented the Movie Recommendation System in 2 ways:\
+**1. Using NTLK and Surprise Library**\
 **2. GraphLabs**
 
 ## Using NLTK and Surprise Library:
@@ -33,7 +33,9 @@ From Exploratory data analysis, we get understand:
  - **Most of the users prefer Drama in movies followed by Comedy and thriller**
  - **Average rating of movies is around 6 out of 10**
 
-We then use IMDbs weighted formula rule to understand the top rated movies. 
+### Content based Filtering
+
+We then use IMDbs weighted formula rule to understand the top rated movies. \
 Weighted Rating (WR) = (v/(v+m)) R+(m/(v+m)) C
 
 Where, R = average for the movie (mean) = (Rating) v = number of votes for the movie = (votes) m = minimum votes required to be listed in the C = the mean vote across the whole report.
