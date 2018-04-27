@@ -1,8 +1,9 @@
 # Movie Recommendation System
 
 The movie recommendation system provides personalized recommendation to each user based on 2 aspects:
-1. Content Based Filtering
-2. Collaborative Based Filtering
+**1. **Content Based Filtering****
+**2. Collaborative Based Filtering**
+**3. Hybrid method**
 
 ### Content Based Filtering:
 Content Based Filtering is based on the user data by providing ratings on the movies. Based on this, the user profile is generated and recommendations are given.
@@ -15,12 +16,15 @@ It is based on segmenting users on the similarity matrix. Users with similar tas
 
 b) Item-Item Collaborative filtering: It is based on segmenting movies(here) on the similarity matrix. 
 
+### Hybrid Method:
+Hybrid Recommender leverages the best of both Content based and collaborative filtering techniques.
+
 ### Implementation:
 We have implemented the Movie Recommendation System in 2 ways:
-1. Using NTLK and Surprise Library
-2. GraphLabs
+**1. Using NTLK and Surprise Library**
+**2. GraphLabs**
 
-### Using NLTK and Surprise Library:
+## Using NLTK and Surprise Library:
 Along with Movie Lens small data set, we have also used the movies metadata available from IMDb which has all the information about a movie like genre, budget, title, revenue, status etc. We have extracted metadata for only those movies that are in the Movie Lens data set. 
 So now, we have movies user ratings data from Movie Lens as well as movies metadata from IMDb.
 
@@ -30,7 +34,6 @@ From Exploratory data analysis, we get understand:
  - **Average rating of movies is around 6 out of 10**
 
 We then use IMDbs weighted formula rule to understand the top rated movies. 
-
 Weighted Rating (WR) = (v/(v+m)) R+(m/(v+m)) C
 
 Where, R = average for the movie (mean) = (Rating) v = number of votes for the movie = (votes) m = minimum votes required to be listed in the C = the mean vote across the whole report.
@@ -51,10 +54,21 @@ Movie description using NLTK for text processing, tokenizing. Find top 90 percen
 We have also tried Cosine Similarity using the TF-IDF Vectorizer to understand similarity between two movies.
 
 #### 2. Metadata based recommender
+The metadata is used to provide additional information about a movie. So analysis based on metadata will result in better understanding of which movies to recommend.  The keywords, director, cast and crew helps to understand better which movies people prefer. To get movies with same director more often, we will add director 3 times and provide additional weight to this feature
+Using Snowball Stemmer, we understand the root of the words used.
+This proves that adding weight to the director definitely works, as most of the movies in Top 10 is of Christopher Nolan.
 
+#### 3. Popularity Based Recommender
+Since our current recommender doesn't take popularity and ratings into account, it will show a not so popular movie over a popular one. Returning a popular movie with high ratings will make more sense. Hence, taking popularity into consideration is extremely important. 
 
+### Collaborative based Filtering
+It provides more better results than Content based as it provides overall user view on a movie than focusing on a particular users tastes.We have built a CF model using Scikit learn’s Surprise library which provides a simple data ingestion for making recommendations through CF. It also provides powerful algorithms like Singular Value Decomposition(SVD) to minimize RMSE and provide great recommendations.
 
-### GraphLabs:
+### Hybrid Method
+Hybrid Recommender leverages the best of both Content based and collaborative filtering techniques.
+We take the user inputs of Genre name and movie he/she like of that genre and gives the table with list of all ratings of similar movies sorted on the basis of expected ratings by that particular user.
+
+## GraphLabs:
 It is a graph-based, high performance, distributed computation framework written in C++ which is used for Machine Learning in Python. 
 
 ![GraphLab](https://www.analyticsvidhya.com/wp-content/uploads/2015/12/architechture.png)
