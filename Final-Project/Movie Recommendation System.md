@@ -125,7 +125,7 @@ The similarity score between two items is calculated by first computing the simi
 
 The recommendations from content based recommender are quite accurate.
 
-<img src = "/Screenshots/content.JPG">
+<img src = "https://github.com/lalwanigunjan/Advances-in-Data-Sciences/blob/master/Final-Project/Screenshots/content.JPG">
 
 
 Reference: https://www.analyticsvidhya.com/blog/2015/12/started-graphlab-python/
