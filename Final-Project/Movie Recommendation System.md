@@ -119,7 +119,7 @@ We got good precision and recall values with Item Similarity model.
 
 #### Content based Recommendations
 
-Cntent based model is in which the similarity between the items recommended is determined by the content of those items rather than learned from user interaction data.
+Content based model is in which the similarity between the items recommended is determined by the content of those items rather than learned from user interaction data.
 
 The similarity score between two items is calculated by first computing the similarity between the item data for each column, then taking a weighted average of the per-column similarities to get the final similarity. The recommendations are generated according to the average similarity of a candidate item to all the items in a user’s set of rated items.
 
