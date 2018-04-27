@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;background-image: url("/movies.jpg")}
+
+.fixed {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+    $("#Genre1").change(function(){
+        var genre1 = $(this).val();
+
+         $.ajax({
+            url: '/movies',
+            type: 'post',
+            contentType: 'application/json;charset=UTF-8',
+            data: JSON.stringify({
+                          genre: genre1 
+             }),
+            dataType: 'json',
+            success:function(response){
+                $("#movie_genre1").empty();
+                for (var i=0;i<response.length;++i)
+                {
+	        var id = response[i]['id'];
+                   var name = response[i]['name'];
+                   $("#movie_genre1").append("<option value='"+id+"'>"+name+"</option>");
+                 }
+            }
+        });
+           });
+
+$(document).on('submit','.validateDontSubmit',function (e) {
+    //prevent the form from doing a submit
+    e.preventDefault();
+    return false;
+})
+
+
+
+$("#submit").click(function(){
+	 var form = $("#myform");
+
+	$(".child").remove();
+
+            var movie1val = $("#movie_genre1").val();
+            var userval = $("#user").val();           
+
+            $.ajax({
+            url: '/recommend',
+            type: 'post',
+            contentType: 'application/json;charset=UTF-8',
+            data: JSON.stringify({
+                          movie1: movie1val,user:userval
+             }),
+            dataType: 'json',
+            success:function(response){
+                
+	     var popularity = response['popularity']
+                for (var i=0;i<popularity.length;++i)
+                {
+			$('#popular tbody').append('<tr class="child"><td>'+popularity[i]+'</td></tr>');
+                }
+
+	     var hybrid = response['hybrid']
+                for (var i=0;i<hybrid.length;++i)
+                {
+			$('#hybrid tbody').append('<tr class="child"><td>'+hybrid[i]+'</td></tr>');
+                }
+
+	     var content = response['content']
+                for (var i=0;i<content.length;++i)
+                {
+			$('#content tbody').append('<tr class="child"><td>'+content[i]+'</td></tr>');
+                }
+	    
+	     $("#result").removeClass("invisible")
+		
+            }
+        });
+
+});
+
+});
+</script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-inverse">
+<div class="container">
+			<div class="row">
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/">Home</a></li>
+						</div>
+			</div>
+</div>
+</nav>
+
+<div id= "first" class="container well">
+	<form class="validateDontSubmit" id="#myform">
+	
+	<h1 align="center">Movie Recommendation System</h3>
+	
+	<div class="fixed">
+		<input type="text" name="user" id="user" placeholder="Please enter user ID"/>
+	</div>
+
+<hr/>
+	  	<h4 align="center"> Select movie genre you prefer </h4>
+
+		<label for="Genre1"><b>Genre #1:</b></label>
+		<select name="Genre1" class="form-control" id="Genre1">
+		{% for o in option_list %}
+    			<option value="{{ o }}" >{{ o }}</option>
+		{% endfor %}
+		</select>
+
+<br/><br/>
+
+	  	<h4 align="center">Select a movie you like from the following list</h4>
+
+		<label for="movie_genre1"><b>Movie of Genre #1:</b></label>
+                      <select  id="movie_genre1" class="form-control" name="movie_genre1" placeholder="Movie of Genre 1" required>
+	           </select>
+
+<br/><br/>
+
+		<div align="center">
+			<button class="btn btn-success btn-outline" id="submit">Submit</button>
+		</div>
+
+	</form>
+</div>
+
+<div id="result" class="container content invisible">
+<div class="row">
+		<div class="col-md-4">
+		<table id="popular" class="table table-striped">
+  			<tbody>
+			<th>Popularity Based Recommendations</th>
+    		           </tbody>
+		</table>
+		</div>
+
+		<div class="col-md-4">
+		<table id="hybrid" class="table table-striped">
+  			<tbody >
+			<th>Hybrid Recommendations</th>
+    		           </tbody>
+		</table>
+		</div>
+
+		<div class="col-md-4">
+		<table id="content" class="table table-striped">
+  			<tbody >
+			<th>Content Based Recommendations</th>
+    		           </tbody>
+		</table>
+		</div>
+</div>
+</div>
+
+</body>
+</html>
