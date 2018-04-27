@@ -9,3 +9,6 @@ docker pull rishabhjain27/movierecommendation:latest
 ```
 docker run -it rishabhjain27/movierecommendation:latest python Project_pipeline.py accessKey=<_accessKey_> secretKey=<_secretKey_> location=<_us-east-1_> bucket=<_bucket_name_>
 ```
+
+### Docker run Screenshot:
+![docker run](https://github.com/lalwanigunjan/Advances-in-Data-Sciences/blob/master/Final-Project/Docker/docker_proj.png)
