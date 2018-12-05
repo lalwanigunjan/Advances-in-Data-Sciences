@@ -32,5 +32,3 @@
 4. Application Deployment
 5. Online Database Deployment
 
-
-#### This project will be completed under the guidance of Professor Srikanth Krishnamurthy and TA Tushar Goel.
